@@ -223,7 +223,7 @@ def main():
     print(f"\nRepeat count: {total_repeat_times}")
     print(f"P: {P}, M: {M}, K: {K}, N: {N}")
     print(f"Mean cycle count: {np.mean(time_end - time_start)/total_repeat_times}")
-    print(f"Max Cycle count: {(max_time_end - min_time_start)/total_repeat_times}")
+    # print(f"Max Cycle count: {(max_time_end - min_time_start)/total_repeat_times}")
     
     freq_ghz = 1.1
     time_cost = (max_time_end - min_time_start) / total_repeat_times / (freq_ghz*1e6)

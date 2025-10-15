@@ -68,11 +68,11 @@ fn gemv_static_step(curL: f16) void {
 // Vector-matrix multiplication
 fn mv_compute() void {
 
-    @load_to_dsr(res_dest_dsr, res_dsd, .{ .save_address = false });
-    @load_to_dsr(res_src0_dsr, res_dsd, .{ .save_address = false });
-    @load_to_dsr(W_src1_dsr, W_dsd, .{ .save_address = true });
+    // @load_to_dsr(res_dest_dsr, res_dsd, .{ .save_address = false });
+    // @load_to_dsr(res_src0_dsr, res_dsd, .{ .save_address = false });
+    // @load_to_dsr(W_src1_dsr, W_dsd, .{ .save_address = true });
 
-    @map(gemv_static_step, X_dsd);
+    // @map(gemv_static_step, X_dsd);
 
     comm_mod.two_tree_allreduce_y(ptr_res);
     meshgemv_entry();
