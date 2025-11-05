@@ -1,0 +1,52 @@
+{
+  "rpc_symbols": [
+    {
+      "id": 3,
+      "kind": "Func",
+      "name": "init_task",
+      "sym_name": "init_task",
+      "type": "void"
+    },
+    {
+      "id": 1,
+      "immutable": 0,
+      "kind": "Var",
+      "name": "W",
+      "sym_name": "ptr_W",
+      "type": "[*]f16"
+    },
+    {
+      "id": 6,
+      "immutable": 0,
+      "kind": "Var",
+      "name": "time_memcpy",
+      "sym_name": "ptr_time_memcpy",
+      "type": "[*]f32"
+    },
+    {
+      "id": 2,
+      "immutable": 0,
+      "kind": "Var",
+      "name": "res",
+      "sym_name": "ptr_res",
+      "type": "[*]f16"
+    },
+    {
+      "id": 5,
+      "inputs": [
+        {
+          "name": "total_warmup_times_",
+          "type": "i16"
+        },
+        {
+          "name": "total_repeat_times_",
+          "type": "i16"
+        }
+      ],
+      "kind": "Func",
+      "name": "shift_host",
+      "sym_name": "shift_host",
+      "type": "void"
+    }
+  ]
+}

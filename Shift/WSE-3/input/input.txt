@@ -1,0 +1,76 @@
+# Simulation parameter sets
+# Format: P L M N
+# Each line represents one simulation configuration
+8 2 160 8
+# Small configurations (fast runs)
+8 8 8 8
+10 10 10 10
+12 12 12 12
+16 16 16 16
+
+# Medium configurations
+8 4 32 64
+10 5 40 80
+12 6 48 96
+16 8 64 128
+
+# Larger configurations
+16 8 128 256
+18 9 144 288
+
+
+# Larger configurations
+32 32 128 256
+
+# Auto-generated parameter sets
+# P range: 16 to 128 (step: 16)
+# L: Start at 1, double until 3*P
+# M=N: Start at P, double until 8*P
+# Max product (P*L*M*N): 1048576
+# Format: P L M N
+#
+16 1 16 16
+16 1 32 32
+16 1 64 64
+16 1 128 128
+16 2 16 16
+16 2 32 32
+16 2 64 64
+16 2 128 128
+16 4 16 16
+16 4 32 32
+16 4 64 64
+16 4 128 128
+16 8 16 16
+16 8 32 32
+16 8 64 64
+16 16 16 16
+16 16 32 32
+16 16 64 64
+16 32 16 16
+16 32 32 32
+32 1 32 32
+32 1 64 64
+32 1 128 128
+32 2 32 32
+32 2 64 64
+32 2 128 128
+32 4 32 32
+32 4 64 64
+32 8 32 32
+32 8 64 64
+32 16 32 32
+32 32 32 32
+48 1 48 48
+48 1 96 96
+48 2 48 48
+48 2 96 96
+48 4 48 48
+48 8 48 48
+64 1 64 64
+64 1 128 128
+64 2 64 64
+64 4 64 64
+80 1 80 80
+80 2 80 80
+96 1 96 96
