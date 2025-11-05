@@ -76,7 +76,7 @@ def generate_parameters(P_start, P_end, P_step, max_product=None):
 
 def main():
     # Default values
-    default_output_file = "input_temp.txt"
+    default_output_file = "simulator_in_out/input/input_temp.txt"
     default_P_start = 16
     default_P_end = 128
     default_P_step = 16

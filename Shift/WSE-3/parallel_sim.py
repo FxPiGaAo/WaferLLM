@@ -7,8 +7,8 @@ Usage:
     python parallel_sim.py [options]
 
 Arguments (all optional):
-    input_file       Path to input file (default: input/input.txt)
-    output_folder    Output directory (default: outputs)
+    input_file       Path to input file (default: simulator_in_out/input/input.txt)
+    output_folder    Output directory (default: simulator_in_out/outputs)
     num_processes    Number of parallel processes (default: 4)
 
     OR use flags:
@@ -25,7 +25,7 @@ Examples:
     python parallel_sim.py -n 8                   # Only specify process count
     python parallel_sim.py --num-processes 16     # Same as above
     python parallel_sim.py params.txt             # Custom input, default output and processes
-    python parallel_sim.py params.txt outputs 8   # Custom input, output, and processes
+    python parallel_sim.py params.txt simulator_in_out/outputs 8   # Custom input, output, and processes
     python parallel_sim.py -i params.txt -n 8     # Using flags
     python parallel_sim.py --runonedp             # Run only first param, always run
 """
@@ -102,8 +102,8 @@ def run_simulation(args):
 
 def main():
     # Default values
-    default_input_file = "input/input.txt"
-    default_output_folder = "outputs"
+    default_input_file = "simulator_in_out/input/input.txt"
+    default_output_folder = "simulator_in_out/outputs"
     default_num_processes = 4
 
     # Create argument parser
@@ -116,7 +116,7 @@ Examples:
   python parallel_sim.py -n 8                   # Only specify process count
   python parallel_sim.py --num-processes 16     # Same as above
   python parallel_sim.py params.txt             # Custom input, default output and processes
-  python parallel_sim.py params.txt outputs 8   # Positional: input, output, processes
+  python parallel_sim.py params.txt simulator_in_out/outputs 8   # Positional: input, output, processes
   python parallel_sim.py -i params.txt -n 8     # Using flags
   python parallel_sim.py -i params.txt -o results -n 16  # All flags
   python parallel_sim.py --runonedp             # Run only first param, always run

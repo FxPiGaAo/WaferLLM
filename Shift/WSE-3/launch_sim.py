@@ -8,13 +8,14 @@ from cerebras.sdk.runtime.sdkruntimepybind import SdkRuntime
 from cerebras.sdk.runtime.sdkruntimepybind import MemcpyDataType, MemcpyOrder
 
 def parse_args():
-    
+
     parser = argparse.ArgumentParser(description="MeshGEMV on simulator")
     parser.add_argument("--P", required=True, type=int, help="PEs rectangle size: P x P")
     parser.add_argument("--L", required=True, type=int, help="Shift distance: L")
     parser.add_argument("--M", required=True, type=int, help="Left vector dimension: 1 x M")
     parser.add_argument("--N", required=True, type=int, help="Right matrix dimension: M x N")
-    
+    parser.add_argument("--out-dir", type=str, default="out", help="Output directory for compiled artifacts (default: out)")
+
     args = parser.parse_args()
     return args
 
@@ -28,22 +29,23 @@ def main():
     random.seed(2025)
     
     args = parse_args()
-    
+
     P = args.P
     L = args.L
-    
+
     M = args.M
     N = args.N
-    
+    out_dir = args.out_dir
+
     Mt = M // P
     Nt = N // P
-    
+
     io_dtype = MemcpyDataType.MEMCPY_16BIT
     memcpy_order = MemcpyOrder.ROW_MAJOR
 
     tensor_W = np.random.rand(M, N).astype(np.float16)
-    
-    runner = SdkRuntime("out")
+
+    runner = SdkRuntime(out_dir)
     runner.load()
     runner.run()
 

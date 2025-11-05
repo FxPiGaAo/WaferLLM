@@ -117,7 +117,7 @@ def collect_results(output_folder, json_output_file):
 
 def main():
     # Default values
-    default_output_folder = "outputs"
+    default_output_folder = "simulator_in_out/outputs"
     default_json_file = "results.json"
 
     if len(sys.argv) > 3:
