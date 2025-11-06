@@ -12,7 +12,7 @@ The system now fully supports parallel execution with no conflicts. Each simulat
 
 ## Quick Start
 
-The repository includes a pre-configured `input/input.txt` file with sample parameters. To run simulations immediately:
+The repository includes a pre-configured `simulator_in_out/input/input.txt` file with sample parameters. To run simulations immediately:
 
 ```bash
 # Run simulations with defaults
@@ -22,7 +22,7 @@ python parallel_sim.py
 python collect_results.py
 ```
 
-This will read parameters from `input/input.txt`, run simulations in parallel (using 4 processes), save outputs to `outputs/`, and collect results into `results.json`.
+This will read parameters from `simulator_in_out/input/input.txt`, run simulations in parallel (using 4 processes), save outputs to `simulator_in_out/outputs/`, and collect results into `results.json`.
 
 ## Usage
 
@@ -35,8 +35,8 @@ python parallel_sim.py [options]
 You can use either positional arguments or flags (or mix them):
 
 **Positional arguments** (all optional):
-- `input_file`: Path to a text file containing parameter sets (one per line) (default: `input/input.txt`)
-- `output_folder`: Directory where output files will be saved (created if it doesn't exist) (default: `outputs`)
+- `input_file`: Path to a text file containing parameter sets (one per line) (default: `simulator_in_out/input/input.txt`)
+- `output_folder`: Directory where output files will be saved (created if it doesn't exist) (default: `simulator_in_out/outputs`)
 - `num_processes`: Number of parallel processes to use (e.g., 4, 8, 16) (default: `4`)
 
 **Flags** (alternative to positional arguments):
@@ -48,26 +48,42 @@ Flags take precedence over positional arguments if both are specified.
 
 ## Generating Parameter Sets
 
-The `generate_params.py` script automates the generation of parameter sets following specific rules, making it easy to create comprehensive parameter grids for simulations.
+The `generate_params.py` script automates the generation of parameter sets following specific rules, making it easy to create comprehensive parameter grids for simulations and WSE executions.
 
 ### Overview
 
-This script generates parameter combinations (P, L, M, N) based on specified ranges and doubling rules:
+This script supports two modes:
+
+**Simulator mode** (use `--simulator` flag):
 - **P**: User-defined range with custom step size
 - **L**: Starts at 1, doubles until reaching 3×P
 - **M and N**: Always equal, start at P, double until reaching 8×P
 
+**WSE mode** (use `--wse` flag):
+- **P**: Specific sequence from 16 to 650
+  - First 5 steps: 16, 32, 48, 64, 80 (increment by 16)
+  - Next 5 steps: 112, 144, 176, 208, 240 (increment by 32)
+  - Remaining steps: 304, 368, 432, ... 624 (increment by 64)
+- **L**: Starts at 1, doubles until reaching 3×P (with constraint L+P < 740)
+- **M and N**: Always equal, start at P, double until reaching 8×P
+- **Note**: WSE mode does not support `--max-product` flag
+
 ### Usage
 
 ```bash
-python generate_params.py [output_file] [P_start] [P_end] [P_step] [--max-product MAX]
+# Simulator mode (supports --max-product)
+python generate_params.py --simulator [output_file] [P_start] [P_end] [P_step] [--max-product MAX]
+
+# WSE mode (uses only L+P < 740 constraint)
+python generate_params.py --wse [output_file]
 ```
 
-### Arguments
+**Note**: You must specify either `--simulator` or `--wse` mode. The script will show an error if no mode is specified.
 
-All arguments are optional with defaults:
+### Arguments for Simulator Mode
 
-- `output_file`: Path where parameter file will be saved (default: `input_temp.txt`)
+- `--simulator`: Required flag to enable simulator mode
+- `output_file`: Path where parameter file will be saved (default: `simulator_in_out/input/input_temp.txt`)
 - `P_start`: Starting value for P (default: `16`)
 - `P_end`: Ending value for P, inclusive (default: `128`)
 - `P_step`: Step increment for P (default: `16`)
@@ -77,19 +93,19 @@ All arguments are optional with defaults:
 
 ```bash
 # Use all defaults: P from 16 to 128 (step 16), no product limit
-python generate_params.py
+python generate_params.py --simulator
 
 # Generate with custom P range
-python generate_params.py params.txt 32 256 32
+python generate_params.py --simulator params.txt 32 256 32
 
 # Enable max product constraint with default value (33554432)
-python generate_params.py params.txt 16 128 16 --max-product
+python generate_params.py --simulator params.txt 16 128 16 --max-product
 
 # Use custom max product constraint
-python generate_params.py params.txt 16 128 16 --max-product 500000
+python generate_params.py --simulator params.txt 16 128 16 --max-product 500000
 
 # Only specify max product, use other defaults
-python generate_params.py --max-product
+python generate_params.py --simulator --max-product
 ```
 
 ### The `--max-product` Option
@@ -142,10 +158,10 @@ The generated file contains:
 
 ```bash
 # Step 1: Generate parameter sets with constraints
-python generate_params.py input/my_params.txt 16 128 16 --max-product
+python generate_params.py --simulator simulator_in_out/input/my_params.txt 16 128 16 --max-product
 
 # Step 2: Run parallel simulations with generated parameters
-python parallel_sim.py input/my_params.txt outputs 8
+python parallel_sim.py simulator_in_out/input/my_params.txt simulator_in_out/outputs 8
 
 # Step 3: Collect results
 python collect_results.py
@@ -202,7 +218,7 @@ Each output file contains:
 ### Example 1: Run with all defaults (recommended for quick start)
 
 ```bash
-# Uses input/input.txt as input, outputs to outputs folder, 4 parallel processes
+# Uses simulator_in_out/input/input.txt as input, outputs to simulator_in_out/outputs folder, 4 parallel processes
 python parallel_sim.py
 ```
 
@@ -272,12 +288,12 @@ When running, you'll see progress messages:
 ```
 Found 4 simulation(s) to run
 Using 4 parallel processes
-Output folder: outputs
+Output folder: simulator_in_out/outputs
 --------------------------------------------------------------------------------
-Running: ./run_sim.sh 4 2 32 64 -> outputs/output_P4_L2_M32_N64.txt
+Running: ./run_sim.sh 4 2 32 64 -> simulator_in_out/outputs/output_P4_L2_M32_N64.txt
 ⊘ Skipped: P=8 L=4 M=64 N=128 (already ran - output file exists)
 ✓ Completed: P=4 L=2 M=32 N=64 (Runtime: 45.23s)
-Running: ./run_sim.sh 16 8 128 256 -> outputs/output_P16_L8_M128_N256.txt
+Running: ./run_sim.sh 16 8 128 256 -> simulator_in_out/outputs/output_P16_L8_M128_N256.txt
 ✓ Completed: P=16 L=8 M=128 N=256 (Runtime: 67.89s)
 --------------------------------------------------------------------------------
 Summary:
@@ -305,8 +321,8 @@ Runtimes:
 
 - **Monitoring**: While simulations run, you can check the output folder to see intermediate results:
   ```bash
-  ls -lh outputs/
-  tail -f outputs/output_P4_L2_M32_N64.txt
+  ls -lh simulator_in_out/outputs/
+  tail -f simulator_in_out/outputs/output_P4_L2_M32_N64.txt
   ```
 
 - **Error handling**: If any simulation fails, the script will continue running others and report failures in the summary.
@@ -332,9 +348,10 @@ WSE-3/
 ├── out_params/                    # Parent folder for all compilation artifacts
 │   ├── out_P4_L2_M32_N64/        # Compilation artifacts for first parameter set
 │   └── out_P8_L4_M64_N128/       # Compilation artifacts for second parameter set
-├── outputs/                       # Simulation results
-│   ├── output_P4_L2_M32_N64.txt  # Results for first parameter set
-│   └── output_P8_L4_M64_N128.txt # Results for second parameter set
+├── simulator_in_out/
+│   └── outputs/                   # Simulation results
+│       ├── output_P4_L2_M32_N64.txt  # Results for first parameter set
+│       └── output_P8_L4_M64_N128.txt # Results for second parameter set
 ...
 ```
 
@@ -374,7 +391,7 @@ python collect_results.py [output_folder] [json_output_file]
 
 Both arguments are optional with defaults:
 
-- `output_folder`: Directory containing the simulation output files (default: `outputs`)
+- `output_folder`: Directory containing the simulation output files (default: `simulator_in_out/outputs`)
 - `json_output_file`: Path to the output JSON file where results will be saved (default: `results.json`)
 
 ### What It Collects
@@ -389,7 +406,7 @@ For each simulation output file, the script extracts:
 ### Examples
 
 ```bash
-# Use defaults: collect from "outputs" folder to "results.json"
+# Use defaults: collect from "simulator_in_out/outputs" folder to "results.json"
 python collect_results.py
 
 # Use custom output folder, default JSON file
@@ -430,7 +447,7 @@ The JSON file contains:
 #### Quick Start (using all defaults)
 
 ```bash
-# The input/input.txt file already contains sample parameters
+# The simulator_in_out/input/input.txt file already contains sample parameters
 # Just run with defaults:
 python parallel_sim.py
 
@@ -447,8 +464,8 @@ cat > params.txt << EOF
 12 12 12 12
 EOF
 
-# Step 2: Run parallel simulations (outputs to "outputs" folder)
-python parallel_sim.py params.txt outputs 2
+# Step 2: Run parallel simulations (outputs to "simulator_in_out/outputs" folder)
+python parallel_sim.py params.txt simulator_in_out/outputs 2
 
 # Step 3: Collect results into JSON (uses defaults)
 python collect_results.py

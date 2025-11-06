@@ -1,0 +1,44 @@
+Command: /home/eidf217/eidf217/yeqihuang/my_wavel/WaferLLM/Shift/WSE-3/run_wse3.sh 64 16 128 128
+Exit code: 1
+Runtime: 20.52 seconds
+--------------------------------------------------------------------------------
+P=64, L=16, M=128, N=128, simulator=false
+Start compiling: 2025-11-06 01:40:04
+Event 2025-11-06 01:40:05 +0000 UTC reason=InconsistentVersion wsjob=wsjob-cw8t8zg3tpzuq9kyxdsvcx message='Warning: job image version 2.5.0-202504190451-45-15111a47 is inconsistent with cluster server version 3.0.3-202509190737-236-c8acd3e9+c8acd3e9cb, there's a risk job could fail due to inconsistent setup.'
+There is no job record with the id wsjob-cw8t8zg3tpzuq9kyxdsvcx in run meta.
+There is no job record with the id wsjob-cw8t8zg3tpzuq9kyxdsvcx in run meta.
+E1106 01:40:24.798382825 1958488 hpack_parser.cc:1234]       Error parsing metadata: error=invalid value key=content-type value=text/html
+E1106 01:40:24.800464352 1958488 hpack_parser.cc:1234]       Error parsing metadata: error=invalid value key=content-type value=text/html
+Traceback (most recent call last):
+  File "compile.py", line 26, in <module>
+    artifact_id = compiler.compile(
+  File "/home/eidf217/eidf217/yeqihuang/modelzoo_venv/lib64/python3.8/site-packages/cerebras/sdk/client/sdk_appliance_client.py", line 1465, in compile
+    response = self._upload_files(app_path, compile_hash, csl_files)
+  File "/home/eidf217/eidf217/yeqihuang/modelzoo_venv/lib64/python3.8/site-packages/cerebras/sdk/client/sdk_appliance_client.py", line 516, in _upload_files
+    response = self.stub().sdk_upload_files(generate_artifacts_args())
+  File "/home/eidf217/eidf217/yeqihuang/modelzoo_venv/lib64/python3.8/site-packages/grpc/_channel.py", line 1131, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/eidf217/eidf217/yeqihuang/modelzoo_venv/lib64/python3.8/site-packages/grpc/_channel.py", line 849, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Received http2 header with status: 503"
+	debug_error_string = "{"created":"@1762393224.798628844","description":"Error received from peer ipv4:10.27.24.65:443","file":"src/core/lib/surface/call.cc","file_line":966,"grpc_message":"Received http2 header with status: 503","grpc_status":14}"
+>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "compile.py", line 35, in <module>
+    json.dump({"artifact_id": artifact_id,}, f)
+  File "/home/eidf217/eidf217/yeqihuang/modelzoo_venv/lib64/python3.8/site-packages/cerebras/sdk/client/sdk_appliance_client.py", line 1432, in __exit__
+    response = self.stub().sdk_shutdown(
+  File "/home/eidf217/eidf217/yeqihuang/modelzoo_venv/lib64/python3.8/site-packages/grpc/_channel.py", line 946, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/eidf217/eidf217/yeqihuang/modelzoo_venv/lib64/python3.8/site-packages/grpc/_channel.py", line 849, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNKNOWN
+	details = "Stream removed"
+	debug_error_string = "{"created":"@1762393224.800600027","description":"Error received from peer ipv4:10.27.24.65:443","file":"src/core/lib/surface/call.cc","file_line":966,"grpc_message":"Stream removed","grpc_status":2}"
+>

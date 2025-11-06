@@ -1,23 +1,32 @@
 #!/usr/bin/env python3
 """
-Collect simulation results from output folder into JSON format.
+Collect simulation/WSE results from output folder into JSON format.
 
 Usage:
-    python collect_results.py [output_folder] [json_output_file]
+    python collect_results.py --mode {simulator|wse} [output_folder] [json_output_file]
 
-    Default output_folder: outputs
-    Default json_output_file: results.json
+Required:
+    --mode {simulator|wse}  Choose data source: 'simulator' or 'wse'
+
+Optional:
+    output_folder           Path to output folder (default depends on mode)
+    json_output_file        Path to output JSON file (default depends on mode)
+
+Defaults by mode:
+    --mode simulator: simulator_in_out/outputs -> simulator_result.json
+    --mode wse:       wse_in_out/outputs -> wse_result.json
 
 Examples:
-    python collect_results.py                          # Uses defaults: outputs -> results.json
-    python collect_results.py test_outputs             # Custom folder, default file
-    python collect_results.py test_outputs results.json # Custom folder and file
+    python collect_results.py --mode simulator         # Uses simulator defaults
+    python collect_results.py --mode wse               # Uses WSE defaults
+    python collect_results.py --mode simulator custom_outputs results.json
 """
 
 import os
 import sys
 import json
 import re
+import argparse
 from pathlib import Path
 
 
@@ -116,26 +125,61 @@ def collect_results(output_folder, json_output_file):
 
 
 def main():
-    # Default values
-    default_output_folder = "simulator_in_out/outputs"
-    default_json_file = "results.json"
+    parser = argparse.ArgumentParser(
+        description='Collect simulation/WSE results from output folder into JSON format.',
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Examples:
+  python collect_results.py --mode simulator                        # Uses simulator defaults
+  python collect_results.py --mode wse                              # Uses WSE defaults
+  python collect_results.py --mode simulator custom_outputs         # Custom folder
+  python collect_results.py --mode wse custom_outputs results.json  # Custom folder and file
 
-    if len(sys.argv) > 3:
-        print("Usage: python collect_results.py [output_folder] [json_output_file]")
-        print("\nDefaults:")
-        print(f"  output_folder: {default_output_folder}")
-        print(f"  json_output_file: {default_json_file}")
-        print("\nExamples:")
-        print("  python collect_results.py                          # Use all defaults")
-        print("  python collect_results.py test_outputs             # Custom folder, default file")
-        print("  python collect_results.py test_outputs results.json # Custom folder and file")
-        sys.exit(1)
+Defaults by mode:
+  --mode simulator: simulator_in_out/outputs -> simulator_result.json
+  --mode wse:       wse_in_out/outputs -> wse_result.json
+        """
+    )
 
-    # Parse arguments with defaults
-    output_folder = sys.argv[1] if len(sys.argv) > 1 else default_output_folder
-    json_output_file = sys.argv[2] if len(sys.argv) > 2 else default_json_file
+    parser.add_argument(
+        '--mode',
+        choices=['simulator', 'wse'],
+        required=True,
+        help='Choose data source: "simulator" or "wse"'
+    )
+    parser.add_argument(
+        'output_folder',
+        nargs='?',
+        help='Path to output folder (default depends on mode)'
+    )
+    parser.add_argument(
+        'json_output_file',
+        nargs='?',
+        help='Path to output JSON file (default depends on mode)'
+    )
 
-    collect_results(output_folder, json_output_file)
+    args = parser.parse_args()
+
+    # Set default output folder based on mode
+    if args.output_folder is None:
+        if args.mode == 'simulator':
+            args.output_folder = 'simulator_in_out/outputs'
+        else:  # wse
+            args.output_folder = 'wse_in_out/outputs'
+
+    # Set default JSON output file based on mode
+    if args.json_output_file is None:
+        if args.mode == 'simulator':
+            args.json_output_file = 'simulator_result.json'
+        else:  # wse
+            args.json_output_file = 'wse_result.json'
+
+    print(f"Mode: {args.mode}")
+    print(f"Reading from: {args.output_folder}")
+    print(f"Writing to: {args.json_output_file}")
+    print()
+
+    collect_results(args.output_folder, args.json_output_file)
 
 
 if __name__ == '__main__':

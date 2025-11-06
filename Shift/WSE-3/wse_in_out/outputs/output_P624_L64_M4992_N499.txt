@@ -1,0 +1,26 @@
+Command: /home/eidf217/eidf217/yeqihuang/my_wavel/WaferLLM/Shift/WSE-3/run_wse3.sh 624 64 4992 499
+Exit code: 1
+Runtime: 110.70 seconds
+--------------------------------------------------------------------------------
+P=624, L=64, M=4992, N=499, simulator=false
+Start compiling: 2025-11-06 12:18:56
+Event 2025-11-06 12:18:57 +0000 UTC reason=InconsistentVersion wsjob=wsjob-iga2afjk6n4pmzgwr7qaai message='Warning: job image version 2.5.0-202504190451-45-15111a47 is inconsistent with cluster server version 3.0.3-202509190737-236-c8acd3e9+c8acd3e9cb, there's a risk job could fail due to inconsistent setup.'
+2025-11-06 12:20:44,842 INFO     CSL compiler output:
+	csl/shift.csl:19:16: error: expected positive integer, got: 0
+	var W_tile: [Mt*Nt]f16 = @zeros([Mt*Nt]f16);
+	               ^
+	csl/shift.csl:19:13: error: failed to evaluate expression for array dimension
+	var W_tile: [Mt*Nt]f16 = @zeros([Mt*Nt]f16);
+	            ^
+	csl/layout.csl:68:13: error: semantic error in module imported here
+	            @set_tile_code(px, py, "shift.csl", .{
+	            ^
+
+Traceback (most recent call last):
+  File "compile.py", line 26, in <module>
+    artifact_id = compiler.compile(
+  File "/home/eidf217/eidf217/yeqihuang/modelzoo_venv/lib64/python3.8/site-packages/cerebras/sdk/client/sdk_appliance_client.py", line 1493, in compile
+    self._check_sdk_response(response, "SdkCompiler.compile() failed.")
+  File "/home/eidf217/eidf217/yeqihuang/modelzoo_venv/lib64/python3.8/site-packages/cerebras/sdk/client/sdk_appliance_client.py", line 550, in _check_sdk_response
+    raise ApplianceUnknownError(f"{preamble}")
+cerebras.appliance.errors.ApplianceUnknownError: SdkCompiler.compile() failed.
