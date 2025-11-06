@@ -6,7 +6,9 @@ A Python script to run multiple WSE executions in parallel using `run_wse3.sh`.
 
 `parallel_wse.py` allows you to execute multiple WSE runs with different parameter sets in parallel, utilizing multiple CPU cores to speed up the process. Each WSE execution's output is saved to a separate file.
 
-**Smart Skip Feature**: The script automatically skips WSE executions that have already been run by checking for existing output files. This allows you to safely re-run the script to resume interrupted batch jobs or add new parameter sets without wasting time on already-completed executions.
+**Cloud-Based Compilation**: Unlike the simulator which stores compiled artifacts locally, WSE uses the Cerebras SDK's remote compilation service (`SdkCompiler`). Compiled artifacts are stored remotely and referenced by unique `artifact_id` values. This enables parallel execution without needing parameter-specific local folders, as each compilation gets its own unique identifier managed by the Cerebras infrastructure.
+
+**Smart Skip Feature**: The script automatically skips WSE executions that have already been run by checking for existing output files in the output folder (default: `wse_in_out/outputs/`). If a file named `output_P<p>_L<l>_M<m>_N<n>.txt` exists, that execution will be skipped. This allows you to safely re-run the script to resume interrupted batch jobs or add new parameter sets without wasting time on already-completed executions.
 
 ## Quick Start
 
@@ -289,9 +291,41 @@ Runtimes:
 - Verify that your parameters are valid for `run_wse3.sh`
 - Ensure you have access to WSE hardware resources
 
+## How WSE Artifact Storage Works
+
+WSE uses a fundamentally different approach to compilation and artifact storage compared to the simulator:
+
+1. **Remote Compilation**: The `compile.py` script uses `SdkCompiler` from Cerebras SDK, which is a cloud-based compilation service that runs on Cerebras infrastructure.
+
+2. **Artifact IDs Instead of Local Files**: When compilation completes, it returns an `artifact_id` (a unique identifier). Only a small JSON file containing this ID is stored locally in `compile_out/artifact_<P>_<L>_<Mt>_<Nt>.json`.
+
+3. **Remote Artifact Storage**: The actual compiled binary artifacts are stored remotely on Cerebras servers and fetched on-demand when `launch_wse3.py` runs using `SdkRuntime(artifact_id)`.
+
+4. **No Local Artifact Conflicts**: Because artifacts are managed remotely by unique IDs, there's no need for parameter-specific local directories like the simulator uses. Multiple WSE compilations can run in parallel without conflicting.
+
+Example directory structure after running parallel WSE executions:
+```
+WSE-3/
+├── compile_out/                          # Local artifact ID references only
+│   ├── artifact_16_1_1_1.json            # Contains artifact_id for remote artifact
+│   ├── artifact_32_2_2_2.json            # Contains artifact_id for remote artifact
+│   └── ...
+├── wse_in_out/
+│   └── outputs/                          # WSE execution results (checked for skip feature)
+│       ├── output_P16_L1_M16_N16.txt     # Results for first parameter set
+│       ├── output_P32_L2_M32_N32.txt     # Results for second parameter set
+│       └── ...
+...
+```
+
+**Note**: The `compile_out/` directory only contains small JSON files (~100 bytes each), not full compiled binaries. The actual compilation artifacts are stored remotely by Cerebras infrastructure.
+
 ## Differences from Simulator Parallel Execution
 
 - Default number of processes is 1 (instead of 4) for testing and resource management
 - Uses `run_wse3.sh` instead of `run_sim.sh`
 - Default input/output directories are in `wse_in_out/` instead of `simulator_in_out/`
+- Uses remote cloud-based compilation (`SdkCompiler`) instead of local compilation (`cslc`)
+- Stores only artifact IDs locally instead of full compiled binaries
 - WSE executions may require specific hardware access and permissions
+- No need to clean up large compilation artifact directories

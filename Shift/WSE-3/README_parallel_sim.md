@@ -6,9 +6,9 @@ A Python script to run multiple simulations in parallel using `run_sim.sh`.
 
 `parallel_sim.py` allows you to execute multiple simulation runs with different parameter sets in parallel, utilizing multiple CPU cores to speed up the process. Each simulation's output is saved to a separate file.
 
-The system now fully supports parallel execution with no conflicts. Each simulation run uses parameter-specific output directories (e.g., `out_P4_L2_M32_N64/`) to store compiled artifacts, preventing any folder conflicts between concurrent simulations.
+The system now fully supports parallel execution with no conflicts. Each simulation run uses parameter-specific output directories (e.g., `simulator_in_out/output_params/out_P4_L2_M32_N64/`) to store compiled artifacts locally, preventing any folder conflicts between concurrent simulations.
 
-**Smart Skip Feature**: The script automatically skips simulations that have already been run by checking for existing output files. This allows you to safely re-run the script to resume interrupted batch jobs or add new parameter sets without wasting time on already-completed simulations.
+**Smart Skip Feature**: The script automatically skips simulations that have already been run by checking for existing output files in the output folder (default: `simulator_in_out/outputs/`). If a file named `output_P<p>_L<l>_M<m>_N<n>.txt` exists, that simulation will be skipped. This allows you to safely re-run the script to resume interrupted batch jobs or add new parameter sets without wasting time on already-completed simulations.
 
 ## Quick Start
 
@@ -329,14 +329,14 @@ Runtimes:
 
 - **Cleaning up compilation artifacts**: After collecting results, you can free up disk space by removing the compilation directory:
   ```bash
-  rm -rf out_params/
+  rm -rf simulator_in_out/output_params/
   ```
 
 ## How Parallel Execution Works
 
 The parallel simulation system has been designed to avoid conflicts between concurrent runs:
 
-1. **Parameter-Specific Compilation Directories**: When `run_sim.sh` is invoked with parameters `P L M N`, it creates a unique output directory named `out_params/out_P<p>_L<l>_M<m>_N<n>/` where the compiled CSL artifacts are stored.
+1. **Parameter-Specific Compilation Directories**: When `run_sim.sh` is invoked with parameters `P L M N`, it creates a unique output directory named `simulator_in_out/output_params/out_P<p>_L<l>_M<m>_N<n>/` where the compiled CSL artifacts are stored locally using the `cslc` compiler.
 
 2. **Independent Execution**: Each simulation run operates in its own compilation directory, using `launch_sim.py` with the `--out-dir` argument to load artifacts from the correct location.
 
@@ -345,17 +345,17 @@ The parallel simulation system has been designed to avoid conflicts between conc
 Example directory structure after running parallel simulations:
 ```
 WSE-3/
-├── out_params/                    # Parent folder for all compilation artifacts
-│   ├── out_P4_L2_M32_N64/        # Compilation artifacts for first parameter set
-│   └── out_P8_L4_M64_N128/       # Compilation artifacts for second parameter set
 ├── simulator_in_out/
-│   └── outputs/                   # Simulation results
-│       ├── output_P4_L2_M32_N64.txt  # Results for first parameter set
-│       └── output_P8_L4_M64_N128.txt # Results for second parameter set
+│   ├── output_params/                    # Parent folder for all compilation artifacts
+│   │   ├── out_P4_L2_M32_N64/            # Locally compiled artifacts for first parameter set
+│   │   └── out_P8_L4_M64_N128/           # Locally compiled artifacts for second parameter set
+│   └── outputs/                          # Simulation results (checked for skip feature)
+│       ├── output_P4_L2_M32_N64.txt      # Results for first parameter set
+│       └── output_P8_L4_M64_N128.txt     # Results for second parameter set
 ...
 ```
 
-**Note**: You may want to periodically clean up the `out_params/` directory to free up disk space, especially after collecting results.
+**Note**: You may want to periodically clean up the `simulator_in_out/output_params/` directory to free up disk space, especially after collecting results with `collect_results.py`.
 
 ## Requirements
 
