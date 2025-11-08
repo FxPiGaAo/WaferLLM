@@ -1,0 +1,6 @@
+# Sample parameter sets for MeshGEMM simulator
+# Format: P M K N
+# MeshGEMM computes [M,N] = [M,K] @ [K,N] on P×P PE grid
+#
+# Example configurations
+64 1024 1024 1024

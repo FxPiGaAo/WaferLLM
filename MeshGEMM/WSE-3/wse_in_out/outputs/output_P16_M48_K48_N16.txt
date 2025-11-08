@@ -1,0 +1,18 @@
+Command: /home/eidf217/eidf217/yeqihuang/my_wavel/WaferLLM/MeshGEMM/WSE-3/run_wse3.sh 16 48 48 16
+Exit code: 0
+Runtime: 111.02 seconds
+--------------------------------------------------------------------------------
+Start compiling: 2025-11-07 01:50:04
+Event 2025-11-07 01:50:05 +0000 UTC reason=InconsistentVersion wsjob=wsjob-2fmgmpdrskys9r5mcno5do message='Warning: job image version 2.5.0-202504190451-45-15111a47 is inconsistent with cluster server version 3.0.3-202509190737-236-c8acd3e9+c8acd3e9cb, there's a risk job could fail due to inconsistent setup.'
+2025-11-07 01:50:38,839 INFO     CSL compiler output:
+	CSL compiler produced no messages. Compilation successful.
+End compiling: 2025-11-07 01:50:44
+Start running: 2025-11-07 01:50:44
+Event 2025-11-07 01:50:45 +0000 UTC reason=InconsistentVersion wsjob=wsjob-ipsr89qk6tj2asjpkdizxw message='Warning: job image version 2.5.0-202504190451-45-15111a47 is inconsistent with cluster server version 3.0.3-202509190737-236-c8acd3e9+c8acd3e9cb, there's a risk job could fail due to inconsistent setup.'
+Running on simulator: False
+
+Repeat count: 50
+P: 16, M: 48, K: 48, N: 16
+Mean cycle count: 4150.434453125
+Max Cycle count: 4155.6
+Time: 0.003777818181818182 ms

@@ -1,0 +1,10 @@
+# Auto-generated parameter sets (Simulator mode)
+# P range: 16 to 32 (step: 16)
+# M range: 1024 to 1024 (step: 1024)
+# K range: 1024 to 1024 (step: 1024)
+# N range: 1024 to 1024 (step: 1024)
+# Format: P M K N
+# MeshGEMM computes [M,N] = [M,K] @ [K,N] on P×P PE grid
+#
+16 1024 1024 1024
+32 1024 1024 1024
