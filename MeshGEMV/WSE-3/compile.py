@@ -25,7 +25,7 @@ else:
     ARGS=f"--arch=wse3 --fabric-dims=762,1172 --fabric-offsets=4,1 -o out --memcpy --channels=1 --params=P:{P},Mt:{Mt},Nt:{Nt},pe_num_group:{pe_num_group},root_1st_phase:{root_1st_phase},root_2nd_phase:{root_2nd_phase}"
 
 # Instantiate compiler
-with SdkCompiler(resource_cpu=48000, resource_mem=64<<30) as compiler:
+with SdkCompiler(resource_cpu=48000, resource_mem=64<<30, disable_version_check=True) as compiler:
 
     # Launch compile job
     artifact_id = compiler.compile(

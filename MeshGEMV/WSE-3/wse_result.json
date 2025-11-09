@@ -1,0 +1,1657 @@
+{
+  "total_experiments": 236,
+  "results": [
+    {
+      "P": 16,
+      "M": 16,
+      "N": 16,
+      "group_num": 2,
+      "mean_cycle_count": 246.95
+    },
+    {
+      "P": 16,
+      "M": 16,
+      "N": 16,
+      "group_num": 4,
+      "mean_cycle_count": 237.96
+    },
+    {
+      "P": 16,
+      "M": 16,
+      "N": 16,
+      "group_num": 8,
+      "mean_cycle_count": 240.96
+    },
+    {
+      "P": 16,
+      "M": 16,
+      "N": 32,
+      "group_num": 2,
+      "mean_cycle_count": 246.95
+    },
+    {
+      "P": 16,
+      "M": 16,
+      "N": 32,
+      "group_num": 4,
+      "mean_cycle_count": 237.95
+    },
+    {
+      "P": 16,
+      "M": 16,
+      "N": 32,
+      "group_num": 8,
+      "mean_cycle_count": 240.95
+    },
+    {
+      "P": 16,
+      "M": 16,
+      "N": 48,
+      "group_num": 2,
+      "mean_cycle_count": 246.95
+    },
+    {
+      "P": 16,
+      "M": 16,
+      "N": 48,
+      "group_num": 4,
+      "mean_cycle_count": 237.95
+    },
+    {
+      "P": 16,
+      "M": 16,
+      "N": 48,
+      "group_num": 8,
+      "mean_cycle_count": 240.95
+    },
+    {
+      "P": 16,
+      "M": 16,
+      "N": 128,
+      "group_num": 2,
+      "mean_cycle_count": 255.95
+    },
+    {
+      "P": 16,
+      "M": 16,
+      "N": 128,
+      "group_num": 4,
+      "mean_cycle_count": 248.95
+    },
+    {
+      "P": 16,
+      "M": 16,
+      "N": 128,
+      "group_num": 8,
+      "mean_cycle_count": 248.95
+    },
+    {
+      "P": 16,
+      "M": 32,
+      "N": 16,
+      "group_num": 2,
+      "mean_cycle_count": 247.95
+    },
+    {
+      "P": 16,
+      "M": 32,
+      "N": 16,
+      "group_num": 4,
+      "mean_cycle_count": 239.95
+    },
+    {
+      "P": 16,
+      "M": 32,
+      "N": 16,
+      "group_num": 8,
+      "mean_cycle_count": 242.95
+    },
+    {
+      "P": 16,
+      "M": 32,
+      "N": 32,
+      "group_num": 2,
+      "mean_cycle_count": 246.96
+    },
+    {
+      "P": 16,
+      "M": 32,
+      "N": 32,
+      "group_num": 4,
+      "mean_cycle_count": 239.96
+    },
+    {
+      "P": 16,
+      "M": 32,
+      "N": 32,
+      "group_num": 8,
+      "mean_cycle_count": 242.96
+    },
+    {
+      "P": 16,
+      "M": 32,
+      "N": 48,
+      "group_num": 2,
+      "mean_cycle_count": 248.95
+    },
+    {
+      "P": 16,
+      "M": 32,
+      "N": 48,
+      "group_num": 4,
+      "mean_cycle_count": 241.95
+    },
+    {
+      "P": 16,
+      "M": 32,
+      "N": 48,
+      "group_num": 8,
+      "mean_cycle_count": 244.95
+    },
+    {
+      "P": 16,
+      "M": 32,
+      "N": 128,
+      "group_num": 2,
+      "mean_cycle_count": 259.95
+    },
+    {
+      "P": 16,
+      "M": 32,
+      "N": 128,
+      "group_num": 4,
+      "mean_cycle_count": 250.95
+    },
+    {
+      "P": 16,
+      "M": 32,
+      "N": 128,
+      "group_num": 8,
+      "mean_cycle_count": 252.95
+    },
+    {
+      "P": 16,
+      "M": 48,
+      "N": 16,
+      "group_num": 2,
+      "mean_cycle_count": 250.95
+    },
+    {
+      "P": 16,
+      "M": 48,
+      "N": 16,
+      "group_num": 4,
+      "mean_cycle_count": 243.95
+    },
+    {
+      "P": 16,
+      "M": 48,
+      "N": 16,
+      "group_num": 8,
+      "mean_cycle_count": 246.95
+    },
+    {
+      "P": 16,
+      "M": 48,
+      "N": 32,
+      "group_num": 2,
+      "mean_cycle_count": 249.95
+    },
+    {
+      "P": 16,
+      "M": 48,
+      "N": 32,
+      "group_num": 4,
+      "mean_cycle_count": 243.95
+    },
+    {
+      "P": 16,
+      "M": 48,
+      "N": 32,
+      "group_num": 8,
+      "mean_cycle_count": 246.95
+    },
+    {
+      "P": 16,
+      "M": 48,
+      "N": 48,
+      "group_num": 2,
+      "mean_cycle_count": 249.96
+    },
+    {
+      "P": 16,
+      "M": 48,
+      "N": 48,
+      "group_num": 4,
+      "mean_cycle_count": 244.95
+    },
+    {
+      "P": 16,
+      "M": 48,
+      "N": 48,
+      "group_num": 8,
+      "mean_cycle_count": 247.95
+    },
+    {
+      "P": 16,
+      "M": 48,
+      "N": 128,
+      "group_num": 2,
+      "mean_cycle_count": 261.95
+    },
+    {
+      "P": 16,
+      "M": 48,
+      "N": 128,
+      "group_num": 4,
+      "mean_cycle_count": 254.95
+    },
+    {
+      "P": 16,
+      "M": 48,
+      "N": 128,
+      "group_num": 8,
+      "mean_cycle_count": 255.95
+    },
+    {
+      "P": 16,
+      "M": 128,
+      "N": 16,
+      "group_num": 2,
+      "mean_cycle_count": 267.95
+    },
+    {
+      "P": 16,
+      "M": 128,
+      "N": 16,
+      "group_num": 4,
+      "mean_cycle_count": 258.95
+    },
+    {
+      "P": 16,
+      "M": 128,
+      "N": 16,
+      "group_num": 8,
+      "mean_cycle_count": 258.95
+    },
+    {
+      "P": 16,
+      "M": 128,
+      "N": 32,
+      "group_num": 2,
+      "mean_cycle_count": 266.95
+    },
+    {
+      "P": 16,
+      "M": 128,
+      "N": 32,
+      "group_num": 4,
+      "mean_cycle_count": 259.95
+    },
+    {
+      "P": 16,
+      "M": 128,
+      "N": 32,
+      "group_num": 8,
+      "mean_cycle_count": 258.95
+    },
+    {
+      "P": 16,
+      "M": 128,
+      "N": 48,
+      "group_num": 2,
+      "mean_cycle_count": 267.95
+    },
+    {
+      "P": 16,
+      "M": 128,
+      "N": 48,
+      "group_num": 4,
+      "mean_cycle_count": 258.95
+    },
+    {
+      "P": 16,
+      "M": 128,
+      "N": 48,
+      "group_num": 8,
+      "mean_cycle_count": 264.95
+    },
+    {
+      "P": 16,
+      "M": 128,
+      "N": 128,
+      "group_num": 2,
+      "mean_cycle_count": 274.96
+    },
+    {
+      "P": 16,
+      "M": 128,
+      "N": 128,
+      "group_num": 4,
+      "mean_cycle_count": 267.95
+    },
+    {
+      "P": 16,
+      "M": 128,
+      "N": 128,
+      "group_num": 8,
+      "mean_cycle_count": 268.95
+    },
+    {
+      "P": 80,
+      "M": 80,
+      "N": 80,
+      "group_num": 2,
+      "mean_cycle_count": 596.96
+    },
+    {
+      "P": 80,
+      "M": 80,
+      "N": 80,
+      "group_num": 4,
+      "mean_cycle_count": 468.95
+    },
+    {
+      "P": 80,
+      "M": 80,
+      "N": 80,
+      "group_num": 8,
+      "mean_cycle_count": 416.96
+    },
+    {
+      "P": 80,
+      "M": 80,
+      "N": 160,
+      "group_num": 2,
+      "mean_cycle_count": 597.95
+    },
+    {
+      "P": 80,
+      "M": 80,
+      "N": 160,
+      "group_num": 4,
+      "mean_cycle_count": 467.95
+    },
+    {
+      "P": 80,
+      "M": 80,
+      "N": 160,
+      "group_num": 8,
+      "mean_cycle_count": 417.95
+    },
+    {
+      "P": 80,
+      "M": 80,
+      "N": 240,
+      "group_num": 2,
+      "mean_cycle_count": 597.95
+    },
+    {
+      "P": 80,
+      "M": 80,
+      "N": 240,
+      "group_num": 4,
+      "mean_cycle_count": 468.95
+    },
+    {
+      "P": 80,
+      "M": 80,
+      "N": 240,
+      "group_num": 8,
+      "mean_cycle_count": 417.95
+    },
+    {
+      "P": 80,
+      "M": 80,
+      "N": 640,
+      "group_num": 2,
+      "mean_cycle_count": 608.95
+    },
+    {
+      "P": 80,
+      "M": 80,
+      "N": 640,
+      "group_num": 4,
+      "mean_cycle_count": 477.95
+    },
+    {
+      "P": 80,
+      "M": 80,
+      "N": 640,
+      "group_num": 8,
+      "mean_cycle_count": 428.95
+    },
+    {
+      "P": 80,
+      "M": 160,
+      "N": 80,
+      "group_num": 2,
+      "mean_cycle_count": 599.95
+    },
+    {
+      "P": 80,
+      "M": 160,
+      "N": 80,
+      "group_num": 4,
+      "mean_cycle_count": 470.95
+    },
+    {
+      "P": 80,
+      "M": 160,
+      "N": 80,
+      "group_num": 8,
+      "mean_cycle_count": 419.95
+    },
+    {
+      "P": 80,
+      "M": 160,
+      "N": 160,
+      "group_num": 2,
+      "mean_cycle_count": 598.96
+    },
+    {
+      "P": 80,
+      "M": 160,
+      "N": 160,
+      "group_num": 4,
+      "mean_cycle_count": 469.95
+    },
+    {
+      "P": 80,
+      "M": 160,
+      "N": 160,
+      "group_num": 8,
+      "mean_cycle_count": 419.96
+    },
+    {
+      "P": 80,
+      "M": 160,
+      "N": 240,
+      "group_num": 8,
+      "mean_cycle_count": 422.95
+    },
+    {
+      "P": 80,
+      "M": 160,
+      "N": 640,
+      "group_num": 8,
+      "mean_cycle_count": 430.95
+    },
+    {
+      "P": 80,
+      "M": 240,
+      "N": 80,
+      "group_num": 8,
+      "mean_cycle_count": 421.95
+    },
+    {
+      "P": 80,
+      "M": 240,
+      "N": 160,
+      "group_num": 8,
+      "mean_cycle_count": 422.95
+    },
+    {
+      "P": 80,
+      "M": 240,
+      "N": 240,
+      "group_num": 8,
+      "mean_cycle_count": 422.96
+    },
+    {
+      "P": 80,
+      "M": 240,
+      "N": 640,
+      "group_num": 8,
+      "mean_cycle_count": 434.95
+    },
+    {
+      "P": 80,
+      "M": 640,
+      "N": 80,
+      "group_num": 8,
+      "mean_cycle_count": 437.95
+    },
+    {
+      "P": 80,
+      "M": 640,
+      "N": 160,
+      "group_num": 8,
+      "mean_cycle_count": 437.95
+    },
+    {
+      "P": 80,
+      "M": 640,
+      "N": 240,
+      "group_num": 8,
+      "mean_cycle_count": 439.95
+    },
+    {
+      "P": 80,
+      "M": 640,
+      "N": 640,
+      "group_num": 8,
+      "mean_cycle_count": 447.95
+    },
+    {
+      "P": 144,
+      "M": 144,
+      "N": 144,
+      "group_num": 8,
+      "mean_cycle_count": 601.95
+    },
+    {
+      "P": 144,
+      "M": 144,
+      "N": 288,
+      "group_num": 8,
+      "mean_cycle_count": 601.95
+    },
+    {
+      "P": 144,
+      "M": 144,
+      "N": 432,
+      "group_num": 8,
+      "mean_cycle_count": 602.95
+    },
+    {
+      "P": 144,
+      "M": 144,
+      "N": 1152,
+      "group_num": 8,
+      "mean_cycle_count": 611.96
+    },
+    {
+      "P": 144,
+      "M": 288,
+      "N": 144,
+      "group_num": 8,
+      "mean_cycle_count": 604.95
+    },
+    {
+      "P": 144,
+      "M": 288,
+      "N": 288,
+      "group_num": 8,
+      "mean_cycle_count": 603.95
+    },
+    {
+      "P": 144,
+      "M": 288,
+      "N": 432,
+      "group_num": 8,
+      "mean_cycle_count": 603.96
+    },
+    {
+      "P": 144,
+      "M": 288,
+      "N": 1152,
+      "group_num": 8,
+      "mean_cycle_count": 615.95
+    },
+    {
+      "P": 144,
+      "M": 432,
+      "N": 144,
+      "group_num": 8,
+      "mean_cycle_count": 605.96
+    },
+    {
+      "P": 144,
+      "M": 432,
+      "N": 288,
+      "group_num": 8,
+      "mean_cycle_count": 605.96
+    },
+    {
+      "P": 144,
+      "M": 432,
+      "N": 432,
+      "group_num": 8,
+      "mean_cycle_count": 606.95
+    },
+    {
+      "P": 144,
+      "M": 432,
+      "N": 1152,
+      "group_num": 8,
+      "mean_cycle_count": 616.96
+    },
+    {
+      "P": 144,
+      "M": 1152,
+      "N": 144,
+      "group_num": 8,
+      "mean_cycle_count": 622.96
+    },
+    {
+      "P": 144,
+      "M": 1152,
+      "N": 288,
+      "group_num": 8,
+      "mean_cycle_count": 621.96
+    },
+    {
+      "P": 144,
+      "M": 1152,
+      "N": 432,
+      "group_num": 8,
+      "mean_cycle_count": 622.96
+    },
+    {
+      "P": 144,
+      "M": 1152,
+      "N": 1152,
+      "group_num": 8,
+      "mean_cycle_count": 631.95
+    },
+    {
+      "P": 208,
+      "M": 208,
+      "N": 208,
+      "group_num": 8,
+      "mean_cycle_count": 784.96
+    },
+    {
+      "P": 208,
+      "M": 208,
+      "N": 416,
+      "group_num": 8,
+      "mean_cycle_count": 785.95
+    },
+    {
+      "P": 208,
+      "M": 208,
+      "N": 624,
+      "group_num": 8,
+      "mean_cycle_count": 786.95
+    },
+    {
+      "P": 208,
+      "M": 208,
+      "N": 1664,
+      "group_num": 8,
+      "mean_cycle_count": 796.95
+    },
+    {
+      "P": 208,
+      "M": 416,
+      "N": 208,
+      "group_num": 8,
+      "mean_cycle_count": 788.95
+    },
+    {
+      "P": 208,
+      "M": 416,
+      "N": 416,
+      "group_num": 8,
+      "mean_cycle_count": 787.95
+    },
+    {
+      "P": 208,
+      "M": 416,
+      "N": 624,
+      "group_num": 8,
+      "mean_cycle_count": 788.95
+    },
+    {
+      "P": 208,
+      "M": 416,
+      "N": 1664,
+      "group_num": 8,
+      "mean_cycle_count": 799.95
+    },
+    {
+      "P": 208,
+      "M": 624,
+      "N": 208,
+      "group_num": 8,
+      "mean_cycle_count": 790.95
+    },
+    {
+      "P": 208,
+      "M": 624,
+      "N": 416,
+      "group_num": 8,
+      "mean_cycle_count": 790.95
+    },
+    {
+      "P": 208,
+      "M": 624,
+      "N": 624,
+      "group_num": 8,
+      "mean_cycle_count": 789.96
+    },
+    {
+      "P": 208,
+      "M": 624,
+      "N": 1664,
+      "group_num": 8,
+      "mean_cycle_count": 801.95
+    },
+    {
+      "P": 208,
+      "M": 1664,
+      "N": 208,
+      "group_num": 8,
+      "mean_cycle_count": 807.95
+    },
+    {
+      "P": 208,
+      "M": 1664,
+      "N": 416,
+      "group_num": 8,
+      "mean_cycle_count": 806.95
+    },
+    {
+      "P": 208,
+      "M": 1664,
+      "N": 624,
+      "group_num": 8,
+      "mean_cycle_count": 807.95
+    },
+    {
+      "P": 208,
+      "M": 1664,
+      "N": 1664,
+      "group_num": 8,
+      "mean_cycle_count": 815.95
+    },
+    {
+      "P": 272,
+      "M": 272,
+      "N": 272,
+      "group_num": 8,
+      "mean_cycle_count": 970.95
+    },
+    {
+      "P": 272,
+      "M": 272,
+      "N": 544,
+      "group_num": 8,
+      "mean_cycle_count": 969.95
+    },
+    {
+      "P": 272,
+      "M": 272,
+      "N": 816,
+      "group_num": 8,
+      "mean_cycle_count": 970.95
+    },
+    {
+      "P": 272,
+      "M": 272,
+      "N": 2176,
+      "group_num": 8,
+      "mean_cycle_count": 979.95
+    },
+    {
+      "P": 272,
+      "M": 544,
+      "N": 272,
+      "group_num": 8,
+      "mean_cycle_count": 972.95
+    },
+    {
+      "P": 272,
+      "M": 544,
+      "N": 544,
+      "group_num": 8,
+      "mean_cycle_count": 971.95
+    },
+    {
+      "P": 272,
+      "M": 544,
+      "N": 816,
+      "group_num": 8,
+      "mean_cycle_count": 972.95
+    },
+    {
+      "P": 272,
+      "M": 544,
+      "N": 2176,
+      "group_num": 8,
+      "mean_cycle_count": 983.95
+    },
+    {
+      "P": 272,
+      "M": 816,
+      "N": 272,
+      "group_num": 8,
+      "mean_cycle_count": 974.95
+    },
+    {
+      "P": 272,
+      "M": 816,
+      "N": 544,
+      "group_num": 8,
+      "mean_cycle_count": 974.95
+    },
+    {
+      "P": 272,
+      "M": 816,
+      "N": 816,
+      "group_num": 8,
+      "mean_cycle_count": 973.96
+    },
+    {
+      "P": 272,
+      "M": 816,
+      "N": 2176,
+      "group_num": 8,
+      "mean_cycle_count": 985.95
+    },
+    {
+      "P": 272,
+      "M": 2176,
+      "N": 272,
+      "group_num": 8,
+      "mean_cycle_count": 991.9711764705883
+    },
+    {
+      "P": 272,
+      "M": 2176,
+      "N": 544,
+      "group_num": 8,
+      "mean_cycle_count": 990.95
+    },
+    {
+      "P": 272,
+      "M": 2176,
+      "N": 816,
+      "group_num": 8,
+      "mean_cycle_count": 991.95
+    },
+    {
+      "P": 272,
+      "M": 2176,
+      "N": 2176,
+      "group_num": 8,
+      "mean_cycle_count": 998.96
+    },
+    {
+      "P": 336,
+      "M": 336,
+      "N": 336,
+      "group_num": 8,
+      "mean_cycle_count": 1188.1028571428571
+    },
+    {
+      "P": 336,
+      "M": 336,
+      "N": 672,
+      "group_num": 8,
+      "mean_cycle_count": 1189.0928571428572
+    },
+    {
+      "P": 336,
+      "M": 336,
+      "N": 1008,
+      "group_num": 8,
+      "mean_cycle_count": 1190.1315476190475
+    },
+    {
+      "P": 336,
+      "M": 336,
+      "N": 2688,
+      "group_num": 8,
+      "mean_cycle_count": 1200.0928571428572
+    },
+    {
+      "P": 336,
+      "M": 672,
+      "N": 336,
+      "group_num": 8,
+      "mean_cycle_count": 1192.1315476190475
+    },
+    {
+      "P": 336,
+      "M": 672,
+      "N": 672,
+      "group_num": 8,
+      "mean_cycle_count": 1191.0928571428572
+    },
+    {
+      "P": 336,
+      "M": 672,
+      "N": 1008,
+      "group_num": 8,
+      "mean_cycle_count": 1192.1315476190475
+    },
+    {
+      "P": 336,
+      "M": 672,
+      "N": 2688,
+      "group_num": 8,
+      "mean_cycle_count": 1203.0928571428572
+    },
+    {
+      "P": 336,
+      "M": 1008,
+      "N": 336,
+      "group_num": 8,
+      "mean_cycle_count": 1194.1315476190475
+    },
+    {
+      "P": 336,
+      "M": 1008,
+      "N": 672,
+      "group_num": 8,
+      "mean_cycle_count": 1194.0928571428572
+    },
+    {
+      "P": 336,
+      "M": 1008,
+      "N": 1008,
+      "group_num": 8,
+      "mean_cycle_count": 1193.1415476190477
+    },
+    {
+      "P": 336,
+      "M": 1008,
+      "N": 2688,
+      "group_num": 8,
+      "mean_cycle_count": 1205.0928571428572
+    },
+    {
+      "P": 336,
+      "M": 2688,
+      "N": 336,
+      "group_num": 8,
+      "mean_cycle_count": 1211.1315476190475
+    },
+    {
+      "P": 336,
+      "M": 2688,
+      "N": 672,
+      "group_num": 8,
+      "mean_cycle_count": 1210.0928571428572
+    },
+    {
+      "P": 336,
+      "M": 2688,
+      "N": 1008,
+      "group_num": 8,
+      "mean_cycle_count": 1211.1315476190475
+    },
+    {
+      "P": 336,
+      "M": 2688,
+      "N": 2688,
+      "group_num": 8,
+      "mean_cycle_count": 1219.0928571428572
+    },
+    {
+      "P": 400,
+      "M": 400,
+      "N": 400,
+      "group_num": 8,
+      "mean_cycle_count": 1372.075
+    },
+    {
+      "P": 400,
+      "M": 400,
+      "N": 800,
+      "group_num": 8,
+      "mean_cycle_count": 1373.115
+    },
+    {
+      "P": 400,
+      "M": 400,
+      "N": 1200,
+      "group_num": 8,
+      "mean_cycle_count": 1373.065
+    },
+    {
+      "P": 400,
+      "M": 400,
+      "N": 3200,
+      "group_num": 8,
+      "mean_cycle_count": 1384.115
+    },
+    {
+      "P": 400,
+      "M": 800,
+      "N": 400,
+      "group_num": 8,
+      "mean_cycle_count": 1375.115
+    },
+    {
+      "P": 400,
+      "M": 800,
+      "N": 800,
+      "group_num": 8,
+      "mean_cycle_count": 1375.125
+    },
+    {
+      "P": 400,
+      "M": 800,
+      "N": 1200,
+      "group_num": 8,
+      "mean_cycle_count": 1378.115
+    },
+    {
+      "P": 400,
+      "M": 800,
+      "N": 3200,
+      "group_num": 8,
+      "mean_cycle_count": 1386.115
+    },
+    {
+      "P": 400,
+      "M": 1200,
+      "N": 400,
+      "group_num": 8,
+      "mean_cycle_count": 1377.115
+    },
+    {
+      "P": 400,
+      "M": 1200,
+      "N": 800,
+      "group_num": 8,
+      "mean_cycle_count": 1378.115
+    },
+    {
+      "P": 400,
+      "M": 1200,
+      "N": 1200,
+      "group_num": 8,
+      "mean_cycle_count": 1378.125
+    },
+    {
+      "P": 400,
+      "M": 1200,
+      "N": 3200,
+      "group_num": 8,
+      "mean_cycle_count": 1390.115
+    },
+    {
+      "P": 400,
+      "M": 3200,
+      "N": 400,
+      "group_num": 8,
+      "mean_cycle_count": 1393.115
+    },
+    {
+      "P": 400,
+      "M": 3200,
+      "N": 800,
+      "group_num": 8,
+      "mean_cycle_count": 1393.065
+    },
+    {
+      "P": 400,
+      "M": 3200,
+      "N": 1200,
+      "group_num": 8,
+      "mean_cycle_count": 1395.115
+    },
+    {
+      "P": 400,
+      "M": 3200,
+      "N": 3200,
+      "group_num": 8,
+      "mean_cycle_count": 1403.065
+    },
+    {
+      "P": 464,
+      "M": 464,
+      "N": 464,
+      "group_num": 8,
+      "mean_cycle_count": 1556.072068965517
+    },
+    {
+      "P": 464,
+      "M": 464,
+      "N": 928,
+      "group_num": 8,
+      "mean_cycle_count": 1557.0987068965517
+    },
+    {
+      "P": 464,
+      "M": 464,
+      "N": 1392,
+      "group_num": 8,
+      "mean_cycle_count": 1558.062068965517
+    },
+    {
+      "P": 464,
+      "M": 464,
+      "N": 3712,
+      "group_num": 8,
+      "mean_cycle_count": 1568.0987068965517
+    },
+    {
+      "P": 464,
+      "M": 928,
+      "N": 464,
+      "group_num": 8,
+      "mean_cycle_count": 1560.062068965517
+    },
+    {
+      "P": 464,
+      "M": 928,
+      "N": 928,
+      "group_num": 8,
+      "mean_cycle_count": 1559.0987068965517
+    },
+    {
+      "P": 464,
+      "M": 928,
+      "N": 1392,
+      "group_num": 8,
+      "mean_cycle_count": 1560.062068965517
+    },
+    {
+      "P": 464,
+      "M": 928,
+      "N": 3712,
+      "group_num": 8,
+      "mean_cycle_count": 1571.062068965517
+    },
+    {
+      "P": 464,
+      "M": 1392,
+      "N": 464,
+      "group_num": 8,
+      "mean_cycle_count": 1562.062068965517
+    },
+    {
+      "P": 464,
+      "M": 1392,
+      "N": 928,
+      "group_num": 8,
+      "mean_cycle_count": 1562.062068965517
+    },
+    {
+      "P": 464,
+      "M": 1392,
+      "N": 1392,
+      "group_num": 8,
+      "mean_cycle_count": 1561.072068965517
+    },
+    {
+      "P": 464,
+      "M": 1392,
+      "N": 3712,
+      "group_num": 8,
+      "mean_cycle_count": 1573.062068965517
+    },
+    {
+      "P": 464,
+      "M": 3712,
+      "N": 464,
+      "group_num": 8,
+      "mean_cycle_count": 1579.062068965517
+    },
+    {
+      "P": 464,
+      "M": 3712,
+      "N": 928,
+      "group_num": 8,
+      "mean_cycle_count": 1578.0987068965517
+    },
+    {
+      "P": 464,
+      "M": 3712,
+      "N": 1392,
+      "group_num": 8,
+      "mean_cycle_count": 1579.062068965517
+    },
+    {
+      "P": 464,
+      "M": 3712,
+      "N": 3712,
+      "group_num": 8,
+      "mean_cycle_count": 1587.0987068965517
+    },
+    {
+      "P": 528,
+      "M": 528,
+      "N": 528,
+      "group_num": 8,
+      "mean_cycle_count": 1742.0522727272726
+    },
+    {
+      "P": 528,
+      "M": 528,
+      "N": 1056,
+      "group_num": 8,
+      "mean_cycle_count": 1741.0901515151513
+    },
+    {
+      "P": 528,
+      "M": 528,
+      "N": 1584,
+      "group_num": 8,
+      "mean_cycle_count": 1742.0522727272726
+    },
+    {
+      "P": 528,
+      "M": 528,
+      "N": 4224,
+      "group_num": 8,
+      "mean_cycle_count": 1751.0901515151513
+    },
+    {
+      "P": 528,
+      "M": 1056,
+      "N": 528,
+      "group_num": 8,
+      "mean_cycle_count": 1744.0522727272726
+    },
+    {
+      "P": 528,
+      "M": 1056,
+      "N": 1056,
+      "group_num": 8,
+      "mean_cycle_count": 1743.0901515151513
+    },
+    {
+      "P": 528,
+      "M": 1056,
+      "N": 1584,
+      "group_num": 8,
+      "mean_cycle_count": 1744.0522727272726
+    },
+    {
+      "P": 528,
+      "M": 1056,
+      "N": 4224,
+      "group_num": 8,
+      "mean_cycle_count": 1755.0901515151513
+    },
+    {
+      "P": 528,
+      "M": 1584,
+      "N": 528,
+      "group_num": 8,
+      "mean_cycle_count": 1746.0635950413225
+    },
+    {
+      "P": 528,
+      "M": 1584,
+      "N": 1056,
+      "group_num": 8,
+      "mean_cycle_count": 1746.0901515151513
+    },
+    {
+      "P": 528,
+      "M": 1584,
+      "N": 1584,
+      "group_num": 8,
+      "mean_cycle_count": 1745.0622727272726
+    },
+    {
+      "P": 528,
+      "M": 1584,
+      "N": 4224,
+      "group_num": 8,
+      "mean_cycle_count": 1757.0901515151513
+    },
+    {
+      "P": 528,
+      "M": 4224,
+      "N": 528,
+      "group_num": 8,
+      "mean_cycle_count": 1763.065041322314
+    },
+    {
+      "P": 528,
+      "M": 4224,
+      "N": 1056,
+      "group_num": 8,
+      "mean_cycle_count": 1762.0998668503214
+    },
+    {
+      "P": 528,
+      "M": 4224,
+      "N": 1584,
+      "group_num": 8,
+      "mean_cycle_count": 1763.0643388429753
+    },
+    {
+      "P": 528,
+      "M": 4224,
+      "N": 4224,
+      "group_num": 8,
+      "mean_cycle_count": 1770.1111065197429
+    },
+    {
+      "P": 592,
+      "M": 592,
+      "N": 592,
+      "group_num": 8,
+      "mean_cycle_count": 1924.0748648648648
+    },
+    {
+      "P": 592,
+      "M": 592,
+      "N": 1184,
+      "group_num": 8,
+      "mean_cycle_count": 1925.0361486486486
+    },
+    {
+      "P": 592,
+      "M": 592,
+      "N": 1776,
+      "group_num": 8,
+      "mean_cycle_count": 1926.0648648648648
+    },
+    {
+      "P": 592,
+      "M": 592,
+      "N": 4736,
+      "group_num": 8,
+      "mean_cycle_count": 1936.0361486486486
+    },
+    {
+      "P": 592,
+      "M": 1184,
+      "N": 592,
+      "group_num": 8,
+      "mean_cycle_count": 1928.0648648648648
+    },
+    {
+      "P": 592,
+      "M": 1184,
+      "N": 1184,
+      "group_num": 8,
+      "mean_cycle_count": 1927.0361486486486
+    },
+    {
+      "P": 592,
+      "M": 1184,
+      "N": 1776,
+      "group_num": 8,
+      "mean_cycle_count": 1928.0648648648648
+    },
+    {
+      "P": 592,
+      "M": 1184,
+      "N": 4736,
+      "group_num": 8,
+      "mean_cycle_count": 1939.0361486486486
+    },
+    {
+      "P": 592,
+      "M": 1776,
+      "N": 592,
+      "group_num": 8,
+      "mean_cycle_count": 1930.0648648648648
+    },
+    {
+      "P": 592,
+      "M": 1776,
+      "N": 1184,
+      "group_num": 8,
+      "mean_cycle_count": 1930.0361486486486
+    },
+    {
+      "P": 592,
+      "M": 1776,
+      "N": 1776,
+      "group_num": 8,
+      "mean_cycle_count": 1929.0748648648648
+    },
+    {
+      "P": 592,
+      "M": 1776,
+      "N": 4736,
+      "group_num": 8,
+      "mean_cycle_count": 1941.0361486486486
+    },
+    {
+      "P": 592,
+      "M": 4736,
+      "N": 592,
+      "group_num": 8,
+      "mean_cycle_count": 1947.0648648648648
+    },
+    {
+      "P": 592,
+      "M": 4736,
+      "N": 1184,
+      "group_num": 8,
+      "mean_cycle_count": 1946.0361486486486
+    },
+    {
+      "P": 592,
+      "M": 4736,
+      "N": 1776,
+      "group_num": 8,
+      "mean_cycle_count": 1947.0648648648648
+    },
+    {
+      "P": 592,
+      "M": 4736,
+      "N": 4736,
+      "group_num": 8,
+      "mean_cycle_count": 1955.0361486486486
+    },
+    {
+      "P": 656,
+      "M": 656,
+      "N": 656,
+      "group_num": 8,
+      "mean_cycle_count": 2143.2191463414633
+    },
+    {
+      "P": 656,
+      "M": 656,
+      "N": 1312,
+      "group_num": 8,
+      "mean_cycle_count": 2144.0628048780486
+    },
+    {
+      "P": 656,
+      "M": 656,
+      "N": 1968,
+      "group_num": 8,
+      "mean_cycle_count": 2145.2091463414636
+    },
+    {
+      "P": 656,
+      "M": 656,
+      "N": 5248,
+      "group_num": 8,
+      "mean_cycle_count": 2155.2091463414636
+    },
+    {
+      "P": 656,
+      "M": 1312,
+      "N": 656,
+      "group_num": 8,
+      "mean_cycle_count": 2147.2091463414636
+    },
+    {
+      "P": 656,
+      "M": 1312,
+      "N": 1312,
+      "group_num": 8,
+      "mean_cycle_count": 2146.0628048780486
+    },
+    {
+      "P": 656,
+      "M": 1312,
+      "N": 1968,
+      "group_num": 8,
+      "mean_cycle_count": 2147.2091463414636
+    },
+    {
+      "P": 656,
+      "M": 1312,
+      "N": 5248,
+      "group_num": 8,
+      "mean_cycle_count": 2158.2091463414636
+    },
+    {
+      "P": 656,
+      "M": 1968,
+      "N": 656,
+      "group_num": 8,
+      "mean_cycle_count": 2149.2091463414636
+    },
+    {
+      "P": 656,
+      "M": 1968,
+      "N": 1312,
+      "group_num": 8,
+      "mean_cycle_count": 2149.2091463414636
+    },
+    {
+      "P": 656,
+      "M": 1968,
+      "N": 1968,
+      "group_num": 8,
+      "mean_cycle_count": 2148.2191463414633
+    },
+    {
+      "P": 656,
+      "M": 1968,
+      "N": 5248,
+      "group_num": 8,
+      "mean_cycle_count": 2160.2091463414636
+    },
+    {
+      "P": 656,
+      "M": 5248,
+      "N": 656,
+      "group_num": 8,
+      "mean_cycle_count": 2166.2091463414636
+    },
+    {
+      "P": 656,
+      "M": 5248,
+      "N": 1312,
+      "group_num": 8,
+      "mean_cycle_count": 2165.2091463414636
+    },
+    {
+      "P": 656,
+      "M": 5248,
+      "N": 1968,
+      "group_num": 8,
+      "mean_cycle_count": 2166.2091463414636
+    },
+    {
+      "P": 656,
+      "M": 5248,
+      "N": 5248,
+      "group_num": 8,
+      "mean_cycle_count": 2174.2091463414636
+    },
+    {
+      "P": 720,
+      "M": 720,
+      "N": 720,
+      "group_num": 8,
+      "mean_cycle_count": 2327.2225
+    },
+    {
+      "P": 720,
+      "M": 720,
+      "N": 1440,
+      "group_num": 8,
+      "mean_cycle_count": 2328.2125
+    },
+    {
+      "P": 720,
+      "M": 720,
+      "N": 2160,
+      "group_num": 8,
+      "mean_cycle_count": 2329.2190703703704
+    },
+    {
+      "P": 720,
+      "M": 720,
+      "N": 5760,
+      "group_num": 8,
+      "mean_cycle_count": 2339.2125
+    },
+    {
+      "P": 720,
+      "M": 1440,
+      "N": 720,
+      "group_num": 8,
+      "mean_cycle_count": 2331.2125
+    },
+    {
+      "P": 720,
+      "M": 1440,
+      "N": 1440,
+      "group_num": 8,
+      "mean_cycle_count": 2330.2125
+    },
+    {
+      "P": 720,
+      "M": 1440,
+      "N": 2160,
+      "group_num": 8,
+      "mean_cycle_count": 2331.2125
+    },
+    {
+      "P": 720,
+      "M": 1440,
+      "N": 5760,
+      "group_num": 8,
+      "mean_cycle_count": 2342.025
+    },
+    {
+      "P": 720,
+      "M": 2160,
+      "N": 720,
+      "group_num": 8,
+      "mean_cycle_count": 2333.2125
+    },
+    {
+      "P": 720,
+      "M": 2160,
+      "N": 1440,
+      "group_num": 8,
+      "mean_cycle_count": 2333.2125
+    },
+    {
+      "P": 720,
+      "M": 2160,
+      "N": 2160,
+      "group_num": 8,
+      "mean_cycle_count": 2332.2225
+    },
+    {
+      "P": 720,
+      "M": 2160,
+      "N": 5760,
+      "group_num": 8,
+      "mean_cycle_count": 2344.2125
+    },
+    {
+      "P": 720,
+      "M": 5760,
+      "N": 720,
+      "group_num": 8,
+      "mean_cycle_count": 2350.2167456790125
+    },
+    {
+      "P": 720,
+      "M": 5760,
+      "N": 1440,
+      "group_num": 8,
+      "mean_cycle_count": 2349.0259938271606
+    },
+    {
+      "P": 720,
+      "M": 5760,
+      "N": 2160,
+      "group_num": 8,
+      "mean_cycle_count": 2350.2173567901236
+    },
+    {
+      "P": 720,
+      "M": 5760,
+      "N": 5760,
+      "group_num": 8,
+      "mean_cycle_count": 2358.033565432099
+    }
+  ]
+}

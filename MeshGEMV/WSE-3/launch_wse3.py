@@ -62,7 +62,7 @@ def main():
 
     print(f"Running on simulator: {args.simulator}")
         
-    with SdkRuntime(artifact_id, simulator=args.simulator) as runner:
+    with SdkRuntime(artifact_id, simulator=args.simulator, disable_version_check=True) as runner:
         
         sym_X = runner.get_id("X")
         sym_W = runner.get_id("W")
