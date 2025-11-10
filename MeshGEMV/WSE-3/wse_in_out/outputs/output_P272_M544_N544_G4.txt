@@ -1,0 +1,26 @@
+Command: ./run_wse3.sh 272 544 544 4 false
+Exit code: 0
+Runtime: 232.26 seconds
+
+================================================================================
+STDOUT:
+================================================================================
+P=272, M=544, N=544, group_num=4, pe_num_group=68, root_1st_phase=34, root_2nd_phase=170, simulator=false
+Start compiling: 2025-11-09 21:39:20
+End compiling: 2025-11-09 21:41:40
+Start running: 2025-11-09 21:41:41
+Running on simulator: False
+
+Repeat count: 100
+P: 272, M: 544, N: 544
+Mean cycle count: 1225.0823529411764
+Max Cycle count: 1231.37
+Time: 0.0011194272727272727 ms
+
+================================================================================
+STDERR:
+================================================================================
+Event 2025-11-09 21:39:21 +0000 UTC reason=InconsistentVersion wsjob=wsjob-e9bpw9zdvukdpzsg6mcxez message='Warning: job image version 2.5.0-202504190451-45-15111a47 is inconsistent with cluster server version 3.0.3-202509190737-236-c8acd3e9+c8acd3e9cb, there's a risk job could fail due to inconsistent setup.'
+2025-11-09 21:41:28,658 INFO     CSL compiler output:
+	CSL compiler produced no messages. Compilation successful.
+Event 2025-11-09 21:41:42 +0000 UTC reason=InconsistentVersion wsjob=wsjob-dcbtrewqxwdxufsjbqxfq8 message='Warning: job image version 2.5.0-202504190451-45-15111a47 is inconsistent with cluster server version 3.0.3-202509190737-236-c8acd3e9+c8acd3e9cb, there's a risk job could fail due to inconsistent setup.'
